@@ -1,0 +1,10 @@
+.experience {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.experience h2 {
+    font-size: 4rem;
+    padding: 1rem 3rem 0rem 11rem;
+}
