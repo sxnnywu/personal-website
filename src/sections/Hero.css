@@ -5,7 +5,7 @@
     justify-content: center;
     height: 100vh;
     width: 100%;
-    color: white;
+    color: #ffffff;
     padding-top: 2rem;
 }
 
@@ -15,25 +15,26 @@
 }
 
 .hero h1{
-    font-size: 6rem;
-    margin-bottom: 0.5rem;
+    font-size: 5rem;
+    font-weight: 650;
+    margin-bottom: 0;
     padding: 1rem 3rem 0rem 3rem;
 }
 
 .hero .headline-text{
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-weight: 400;
     margin: 0.1rem;
 }
 
 .hero .headline{
-    padding: 1rem 3rem 0rem 3rem;
+    padding: 0rem 3rem 0rem 3rem;
 }
 
 .hero .description{
-    margin-top: 1rem;;
-    padding: 0.5rem 3rem;
-    font-size: 1rem;
-    font-weight: 500;
+    padding: 0rem 3rem 1rem 3rem;
+    font-size: 0.9rem;
+    font-weight: 300;
 }
 
 .hero .buttons{
@@ -46,9 +47,9 @@
 
 .hero a{
     text-decoration: none;
-    color: #ffffff;
-    background-color: #c36a88;
-    padding: 0.6rem 3.1rem;
+    color: #eaf8ff;
+    border: 1px solid #eaf8ff;
+    padding: 0.6rem 2.5rem;
     border-radius: 8px;
     transition: background-color 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -56,15 +57,16 @@
 }
 
 .hero a:hover{
-    background-color: #99536f;
+    background-color: #ffffff;
+    color: #4B4E6D;
     box-shadow: 0 6px 10px rgba(255, 255, 255, 0.3);
     transform: translateY(-3px);
     transition: transform 0.2s ease;
 }
 
 .hero img{
-    width: 380px;
-    height: 500px;
+    width: 350px;
+    height: 470px;
     border-radius: 10%;
     object-fit: cover;
     margin-top: 6rem;
