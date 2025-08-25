@@ -4,16 +4,16 @@ import { motion } from 'framer-motion';
 import ExperienceItem from './ExperienceItem.jsx';
 import tps from '../assets/tps.JPG';
 import './ExperienceBelt.css';
-// import iycge from '../assets/iycge.png';
-// import skans from '../assets/skans.png';
-// import nofrills from '../assets/nofrills.png';
+import iycge from '../assets/iycge.png';
+import skans from '../assets/skans.png';
+import nofrills from '../assets/nofrills.jpeg';
 
 const items = [
     {
         title: "Advisor",
         company: "International Youth Council on Gender Equality",
         date: "Aug 2025 - Present",
-        imageURL: tps
+        imageURL: iycge
     },
     {
         title: "Founder & CEO",
@@ -25,19 +25,19 @@ const items = [
         title: "Accounting Intern",
         company: "Skans Accountants",
         date: "Feb 2024 - Jun 2024",
-        imageURL: tps
+        imageURL: skans
     },
     {
         title: "Frontend Supervisor",
         company: "No Frills",
         date: "Aug 2023 - Mar 2024",
-        imageURL: tps
+        imageURL: nofrills
     },
     {
         title: "Cashier",
         company: "No Frills",
         date: "Aug 2022 - Aug 2023",
-        imageURL: tps
+        imageURL: nofrills
     }
 ];
 
