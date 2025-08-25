@@ -9,6 +9,13 @@ function Experience() {
 
     const [selectedExperience, setSelectedExperience] = useState(null);
 
+    function handleSelectExperience(item){
+        const match = experiences.find(
+            (exp) => exp.title === item.title && exp.company === item.company
+        );
+        setSelectedExperience(match);
+    }
+
     const experiences = [
         {
             title: "Advisor",
@@ -105,11 +112,11 @@ function Experience() {
     return (
         <div className="experience">
             <h2>Experience</h2>
-            <ExperienceBelt onSelect={setSelectedExperience} />
+            <ExperienceBelt onSelect={handleSelectExperience} />
             
             {selectedExperience && (
                 <ExperienceStory
-                experience={experiences[0]}
+                experience={selectedExperience}
                 onClose={() => setSelectedExperience(null)}
                 />
             )}
