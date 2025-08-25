@@ -9,7 +9,7 @@ function Experience() {
 
     const [selectedExperience, setSelectedExperience] = useState(null);
 
-    function handleSelectExperience(item){
+    function handleSelectExperience(item) {
         const match = experiences.find(
             (exp) => exp.title === item.title && exp.company === item.company
         );
@@ -113,12 +113,14 @@ function Experience() {
         <div className="experience">
             <h2>Experience</h2>
             <ExperienceBelt onSelect={handleSelectExperience} />
-            
+
             {selectedExperience && (
-                <ExperienceStory
-                experience={selectedExperience}
-                onClose={() => setSelectedExperience(null)}
-                />
+                <div className="modal-overlay">
+                    <ExperienceStory
+                        experience={selectedExperience}
+                        onClose={() => setSelectedExperience(null)}
+                    />
+                </div>
             )}
         </div>
     );

@@ -10,3 +10,31 @@
     font-size: 4rem;
     font-weight: 600;
 }
+
+.experience .modal-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.4); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999; 
+    animation: fadeIn 0.3s forward;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/* Optional: add a slight pop/fade effect to ExperienceStory */
+.experience-story {
+    transform: scale(0.95);
+    animation: popIn 0.3s forwards;
+}
+
+@keyframes popIn {
+    to { transform: scale(1); }
+}
