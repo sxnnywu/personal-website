@@ -1,0 +1,23 @@
+.experience-belt {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.belt-track {
+    display: flex;
+    gap: 2rem;
+    animation: scroll 90s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(calc(100vw + 2rem));
+    }
+    100% {
+        transform: translateX(calc(-100% - 2rem));
+    }
+}

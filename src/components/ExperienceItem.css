@@ -1,0 +1,62 @@
+.experience-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+    border: 1px solid #ffffff;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    width: 200px;
+    height: auto;
+    flex-shrink: 0;
+    gap: 0.1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
+}
+
+.experience-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 0.8rem;
+}
+
+.experience-item p:first-of-type {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    color: #ffffff;
+}
+
+.experience-item p:last-of-type {
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin: 0;
+    color: #cccccc;
+}
+
+.experience-item button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #EB8A90;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.experience-item button:hover {
+    background-color: #ffffff;
+    color: #EB8A90;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+}
+
+.experience-item span {
+    font-size: 0.8rem;
+    color: #aaaaaa;
+}
