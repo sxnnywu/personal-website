@@ -49,29 +49,31 @@ function ExperienceBelt() {
                 {items.map((item, index) => (
                     <motion.div
                         key={`first-${index}`}
-                        className="experience-item"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
                     >
-                        <img src={item.imageURL} alt={`${item.title} logo`} />
-                        <p>{item.title}</p>
-                        <p>{item.company}</p>
-                        <span>{item.date}</span>
+                        <ExperienceItem
+                            title={item.title}
+                            company={item.company}
+                            date={item.date}
+                            imageURL={item.imageURL}
+                        />
                     </motion.div>
                 ))}
                 {items.map((item, index) => (
                     <motion.div
                         key={`second-${index}`}
-                        className="experience-item"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
                     >
-                        <img src={item.imageURL} alt={`${item.title} logo`} />
-                        <p>{item.title}</p>
-                        <p>{item.company}</p>
-                        <span>{item.date}</span>
+                        <ExperienceItem
+                            title={item.title}
+                            company={item.company}
+                            date={item.date}
+                            imageURL={item.imageURL}
+                        />
                     </motion.div>
                 ))}
             </div>
