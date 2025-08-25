@@ -8,41 +8,42 @@ import iycge from '../assets/iycge.png';
 import skans from '../assets/skans.png';
 import nofrills from '../assets/nofrills.jpeg';
 
-const items = [
-    {
-        title: "Advisor",
-        company: "International Youth Council on Gender Equality",
-        date: "Aug 2025 - Present",
-        imageURL: iycge
-    },
-    {
-        title: "Founder & CEO",
-        company: "The Pink Stairs",
-        date: "Jun 2024 - Present",
-        imageURL: tps
-    },
-    {
-        title: "Accounting Intern",
-        company: "Skans Accountants",
-        date: "Feb 2024 - Jun 2024",
-        imageURL: skans
-    },
-    {
-        title: "Frontend Supervisor",
-        company: "No Frills",
-        date: "Aug 2023 - Mar 2024",
-        imageURL: nofrills
-    },
-    {
-        title: "Cashier",
-        company: "No Frills",
-        date: "Aug 2022 - Aug 2023",
-        imageURL: nofrills
-    }
-];
-
 // COMPONENT
-function ExperienceBelt() {
+function ExperienceBelt({ onSelect }) {
+
+    const items = [
+        {
+            title: "Advisor",
+            company: "International Youth Council on Gender Equality",
+            date: "Aug 2025 - Present",
+            imageURL: iycge
+        },
+        {
+            title: "Founder & CEO",
+            company: "The Pink Stairs",
+            date: "Jun 2024 - Present",
+            imageURL: tps
+        },
+        {
+            title: "Accounting Intern",
+            company: "Skans Accountants",
+            date: "Feb 2024 - Jun 2024",
+            imageURL: skans
+        },
+        {
+            title: "Frontend Supervisor",
+            company: "No Frills",
+            date: "Aug 2023 - Mar 2024",
+            imageURL: nofrills
+        },
+        {
+            title: "Cashier",
+            company: "No Frills",
+            date: "Aug 2022 - Aug 2023",
+            imageURL: nofrills
+        }
+    ];
+
     return (
         <div className="experience-belt">
             <div className="belt-track">
@@ -58,6 +59,7 @@ function ExperienceBelt() {
                             company={item.company}
                             date={item.date}
                             imageURL={item.imageURL}
+                            onLearnMore={() => onSelect(item)}
                         />
                     </motion.div>
                 ))}
@@ -73,6 +75,7 @@ function ExperienceBelt() {
                             company={item.company}
                             date={item.date}
                             imageURL={item.imageURL}
+                            onLearnMore={() => onSelect(item)}
                         />
                     </motion.div>
                 ))}
