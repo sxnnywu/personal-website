@@ -29,6 +29,12 @@
     color: #ffffff;
 }
 
+.experience-item p,
+.experience-item span {
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
 .experience-item p:last-of-type {
     font-size: 0.9rem;
     font-weight: 400;
