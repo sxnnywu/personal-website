@@ -10,14 +10,15 @@
 .belt-track {
     display: flex;
     gap: 2rem;
-    animation: scroll 90s linear infinite;
+    animation: scroll 70s linear infinite;
+    width: max-content;
 }
 
 @keyframes scroll {
     0% {
-        transform: translateX(calc(100vw + 2rem));
+        transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-100% - 2rem));
+        transform: translateX(-50%);
     }
 }
