@@ -29,7 +29,7 @@
 }
 
 .experience-item p:first-of-type {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
     margin: 0;
     color: #ffffff;
@@ -39,6 +39,7 @@
 .experience-item span {
     white-space: normal;
     overflow-wrap: break-word;
+    font-style: normal;
 }
 
 .experience-item p:last-of-type {

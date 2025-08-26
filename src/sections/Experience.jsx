@@ -120,6 +120,7 @@ function Experience() {
     return (
         <div className="experience">
             <h2>Experience</h2>
+            <p>Strategy, problem-solving, and growth in action</p>
             <ExperienceBelt onSelect={handleSelectExperience} />
 
             {selectedExperience && (

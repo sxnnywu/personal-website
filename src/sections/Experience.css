@@ -7,8 +7,19 @@
 }
 
 .experience h2 {
-    font-size: 4rem;
-    font-weight: 600;
+    color: #ffffff;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+.experience p{
+    font-size: 1.1rem;
+    font-weight: 400;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 3rem;
 }
 
 .experience .modal-overlay{
