@@ -1,24 +1,18 @@
 // IMPORTS
 import React, { useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Pagination } from 'swiper/modules'
 import './Projects.css';
 
 // COMPONENT
 function Projects() {
 
     return (
-        <div className="experience">
-            <h2>Experience</h2>
-            <p>Strategy, problem-solving, and growth in action</p>
-            <ExperienceBelt onSelect={handleSelectExperience} />
-
-            {selectedExperience && (
-                <div className="modal-overlay">
-                    <ExperienceStory
-                        experience={selectedExperience}
-                        onClose={() => setSelectedExperience(null)}
-                    />
-                </div>
-            )}
+        <div className="projects">
+            <h2>My Projects</h2>
+            <p>Learning fast, building faster!</p>
         </div>
     );
 }

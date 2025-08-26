@@ -6,7 +6,7 @@
     padding: 1.5rem;
     border: 1px solid #ffffff;
     border-radius: 12px;
-    background: rgba(0, 0, 0, 0.05);
+    background: rgba(255, 244, 235, 0.984);
     width: 200px;
     height: auto;
     flex-shrink: 0;
@@ -32,7 +32,7 @@
     font-size: 1rem;
     font-weight: 600;
     margin: 0;
-    color: #ffffff;
+    color: #333;
 }
 
 .experience-item p,
@@ -46,7 +46,7 @@
     font-size: 0.9rem;
     font-weight: 400;
     margin: 0;
-    color: #cccccc;
+    color: #333;
 }
 
 .experience-item button {
@@ -71,5 +71,5 @@
 
 .experience-item span {
     font-size: 0.8rem;
-    color: #aaaaaa;
+    color: #767676;
 }

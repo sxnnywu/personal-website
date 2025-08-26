@@ -10,7 +10,7 @@ function Hero() {
 
             <div className="text">
 
-                <h1>Sunny Wu</h1>
+                <h1>Hi, I'm Sunny</h1>
 
                 <div className="headline">
                     <p className="headline-text"><b>Computer Science @ University of Waterloo</b></p>

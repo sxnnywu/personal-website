@@ -5,6 +5,7 @@ import './App.css'
 import Navbar from './components/Navbar.jsx';
 import Hero from './sections/Hero.jsx'; 
 import Experience from './sections/Experience.jsx';
+import Projects from './sections/Projects.jsx';
 
 // COMPONENT
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Navbar />
         <Hero />
         <Experience />
+        <Projects />
       </div>
     </>
   )
