@@ -66,12 +66,13 @@
 .hero a {
     text-decoration: none;
     color: #eaf8ff;
-    border: 1px solid #eaf8ff;
+    border: 0.8px solid #eaf8ff;
     padding: 0.6rem 2.5rem;
     border-radius: 8px;
     transition: background-color 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    font-weight: 700;
+    font-weight: 500;
+    font-size: 0.9rem;
 }
 
 .hero a:hover {

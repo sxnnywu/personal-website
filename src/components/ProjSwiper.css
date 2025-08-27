@@ -1,0 +1,60 @@
+.mySwiper {
+  width: 80%;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  margin-bottom: 4rem;
+}
+
+.project-slide {
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  width: 300px;
+  height: 330px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+.project-card img {
+  display: block;
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0 auto 0 auto;
+}
+
+.project-card h3 {
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.project-card .description {
+  font-size: 0.8rem;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.project-card .stack {
+  font-size: 0.75rem;
+  font-weight: 550;
+  font-style: normal;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #ffb8b8;
+}

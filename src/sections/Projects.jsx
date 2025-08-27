@@ -1,43 +1,86 @@
 // IMPORTS
 import React, { useState, useRef } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/effect-coverflow';
-import { EffectCoverflow, Pagination } from 'swiper/modules'
 import './Projects.css';
-import { m } from 'framer-motion';
+import ProjSwiper from '../components/ProjSwiper.jsx';
+import nomnom from '../assets/nomnom.png';
+import chalkboard from '../assets/chalkboard.png';
+import chalk from '../assets/chalk.png'
+import queueme from '../assets/queueme.png';
+import beamy from '../assets/beamy.png';
+import bohanza from '../assets/bohanza.png';
+import byte from '../assets/byte.png';
+import mind from '../assets/mind.png';
 
 // COMPONENT
 function Projects() {
 
-    const swiperRef = useRef(null);
-
-    const projects = [
-        {
-            title: "Bohanza",
-            description: "Digitized card game utilizing heuristics",
-            stack: "java",
-            link: "#"
-        },
-        {
-            title: "QueueMe",
-            description: "Mobile app digitizing physical lines for service providers and clients",
-            stack: "react native, typescript, python, flask",
-            link: "#"
-        },
+    const sweprojects = [
         {
             title: "Nom Nom",
             description: "DMZ backed discreet safety app for domestic violence, disguised as a bakery",
             stack: "react native, typescript, node js, express, mongodb, aws, callkit",
-            link: "#"
+            link: "https://www.youtube.com/watch?v=j03ZX847f54&t=1s",
+            imageURL: nomnom
         },
         {
             title: "Chalkboard",
             description: "Desktop app designed to streamline student club organization in a high school or university setting",
             stack: "java, sqlite",
-            link: "#"
+            link: "https://github.com/sxnnywu/Chalkboard",
+            imageURL: chalk
         },
+        {
+            title: "CrimeSight",
+            description: "Desktop app featuring customizable data visualization for: Use of Force Rates in Correctional Institutions in Ontario",
+            stack: "java",
+            link: "https://github.com/sxnnywu/CrimeSight"
+        },
+        {
+            title: "QueueMe",
+            description: "Mobile app digitizing physical lines for service providers and clients",
+            stack: "react native, typescript, python, flask",
+            link: "https://github.com/sxnnywu/QueueMe",
+            imageURL: queueme
+        },
+        {
+            title: "Code With Beamy",
+            description: "A desktop app to learn Java's OOP through lessons, escape room game, and assessment.",
+            stack: "java",
+            link: "https://github.com/sxnnywu/Code-With-Beamy",
+            imageURL: beamy
+        }
+    ];
+
+    const gamedevprojects = [
+        {
+            title: "Bohanza",
+            description: "Digitized card game utilizing heuristics",
+            stack: "java",
+            link: "https://github.com/sxnnywu/Bohanza",
+            imageURL: bohanza
+        },
+        {
+            title: "MazeRace",
+            description: "Desktop maze game: Choose a character, race through the maze, collect coins, and unlock new levels.",
+            stack: "java",
+            link: "https://github.com/sxnnywu/MazeRace"
+        }
+    ];
+
+    const writingprojects = [
+        {
+            title: "Byte Sized Learning",
+            description: "Co-author",
+            stack: "Coding workbook for kids donated across Peru & Kenya to underserved students",
+            imageURL: byte
+        },
+        {
+            title: "MIND (Math in Nature's Design",
+            description: "Cofounder, research writer, marketing manager",
+            stack: "Weekly math blog with 600+ readers",
+            link: "https://mindmathblog.wordpress.com/",
+            imageURL: mind
+        }
     ]
 
     return (
@@ -49,42 +92,15 @@ function Projects() {
                 </span>
             </p>
 
-            <Swiper
-                onSwiper={swiper =>(swiperRef.current = swiper)}
-                effect="coverflow"
-                grabCursor={true}
-                centeredSlides={true}
-                slidesPerView="auto"
-                loop={true}
-                speed={500}
-                coverflowEffect={{
-                    rotate: 20,
-                    stretch: 0,
-                    depth: 220,
-                    modifier: 2,
-                    slideShadows: true,
-                }}
-                pagination={{ clickable: true }}
-                modules={[EffectCoverflow, Pagination]}
-                className="mySwiper"
-            >
-                {projects.map((proj, index) => (
-                    <SwiperSlide key={index} className="project-slide">
-                        <div 
-                            className="project-card" 
-                            onClick={() => swiperRef.current.slideTo(index, 500)}
-                        >
-                            <h3>{proj.title}</h3>
-                            <p>{proj.description}</p>
-                            {proj.link && (
-                                <a href={proj.link} target="_blank" rel="noopener noreferrer">
-                                    View Project →
-                                </a>
-                            )}
-                        </div>
-                    </SwiperSlide>
-                ))}
-            </Swiper>
+            <h4>Software</h4>
+            <ProjSwiper projects={sweprojects} />
+
+            <h4>Game Dev</h4>
+            <ProjSwiper projects={gamedevprojects} />
+
+            <h4>Publications</h4>
+            <ProjSwiper projects={writingprojects} />
+            
         </div>
     );
 }
