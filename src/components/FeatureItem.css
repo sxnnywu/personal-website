@@ -1,0 +1,39 @@
+.feature-item {
+    width: 80%;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 4rem;
+}
+
+.feature-item > div {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border-radius: 8px; /* matches image rounding */
+}
+
+.feature-item > div:hover {
+    transform: translateY(-10px) scale(1.05); /* lift and slightly enlarge */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* softer, bigger shadow */
+}
+
+.feature-item img {
+  display: block;
+  width: 30vw;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+}
+
+.feature-item h3 {
+    display: block;
+    font-size: 1.1rem;
+    margin: 0 auto 1 auto;
+}

@@ -6,7 +6,7 @@ import 'swiper/css/effect-coverflow';
 import { EffectCoverflow, Pagination } from 'swiper/modules'
 import './ProjSwiper.css';
 
-function ProjSwiper({projects = []}) {
+function ProjSwiper({ projects = [] }) {
 
     const swiperRef = useRef(null);
 
@@ -34,7 +34,16 @@ function ProjSwiper({projects = []}) {
                 <SwiperSlide key={index} className="project-slide">
                     <div
                         className="project-card"
-                        onClick={() => swiperRef.current?.slideToLoop(index, 500)}
+                        onClick={() => {
+                            const swiper = swiperRef.current;
+                            if (!swiper) return;
+
+                            // if this slide is already in focus, open link
+                            if (swiper.realIndex === index && proj.link) 
+                                window.open(proj.link, "_blank", "noopener,noreferrer");
+                            else 
+                                swiper.slideToLoop(index, 500);
+                        }}
                     >
                         {proj.imageURL && <img src={proj.imageURL} alt='mockup' />}
                         <h3>{proj.title}</h3>

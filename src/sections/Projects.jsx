@@ -4,10 +4,12 @@ import './Projects.css';
 import ProjSwiper from '../components/ProjSwiper.jsx';
 import nomnom from '../assets/nomnom.png';
 import chalkboard from '../assets/chalkboard.png';
-import chalk from '../assets/chalk.png'
+import chalk from '../assets/chalk.png';
+import crimesight from '../assets/crimesight.png';
 import queueme from '../assets/queueme.png';
 import beamy from '../assets/beamy.png';
 import bohanza from '../assets/bohanza.png';
+import mazerace from '../assets/mazerace.png';
 import byte from '../assets/byte.png';
 import mind from '../assets/mind.png';
 
@@ -31,9 +33,10 @@ function Projects() {
         },
         {
             title: "CrimeSight",
-            description: "Desktop app featuring customizable data visualization for: Use of Force Rates in Correctional Institutions in Ontario",
+            description: "Desktop app featuring customizable data visualization for dataset: Use of Force Rates in Correctional Institutions in Ontario",
             stack: "java",
-            link: "https://github.com/sxnnywu/CrimeSight"
+            link: "https://github.com/sxnnywu/CrimeSight",
+            imageURL: crimesight
         },
         {
             title: "QueueMe",
@@ -63,7 +66,8 @@ function Projects() {
             title: "MazeRace",
             description: "Desktop maze game: Choose a character, race through the maze, collect coins, and unlock new levels.",
             stack: "java",
-            link: "https://github.com/sxnnywu/MazeRace"
+            link: "https://github.com/sxnnywu/MazeRace",
+            imageURL: mazerace
         }
     ];
 
@@ -86,7 +90,7 @@ function Projects() {
     return (
         <div className="projects">
             <h2>My Projects</h2>
-            <p>Want to see more? Check out my
+            <p>Want to see more? Click on the projects or check out my
                 <span>
                     <a href="https://github.com/sxnnywu" target="_blank"> github!</a>
                 </span>
