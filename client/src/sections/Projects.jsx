@@ -58,7 +58,7 @@ function Projects() {
     const gamedevprojects = [
         {
             title: "Bohanza",
-            description: "Digitized card game utilizing heuristics",
+            description: "Digitized card game. Play against another player or again a AI heuristic algorithm",
             stack: "java",
             link: "https://github.com/sxnnywu/Bohanza",
             imageURL: bohanza
