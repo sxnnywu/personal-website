@@ -11,6 +11,7 @@ import beamy from '../assets/beamy.png';
 import bohanza from '../assets/bohanza.png';
 import mazerace from '../assets/mazerace.png';
 import byte from '../assets/byte.png';
+import bytes from '../assets/bytes.png';
 import mind from '../assets/mind.png';
 
 // COMPONENT
@@ -76,7 +77,7 @@ function Projects() {
             title: "Byte Sized Learning",
             description: "Co-author",
             stack: "Coding workbook for kids donated across Peru & Kenya to underserved students",
-            imageURL: byte
+            imageURL: bytes
         },
         {
             title: "MIND (Math in Nature's Design",
