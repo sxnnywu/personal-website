@@ -88,7 +88,7 @@ function Projects() {
     ]
 
     return (
-        <div className="projects">
+        <div className="projects" id="projects">
             <h2>My Projects</h2>
             <p>Want to see more? Click on the projects or check out my
                 <span>

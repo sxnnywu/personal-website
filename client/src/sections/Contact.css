@@ -1,3 +1,11 @@
+:root {
+  --color: #ffffff;
+}
+
+[data-theme="light"] {
+  --color: #333;
+}
+
 .contact{
     display: flex;
     flex-direction: column;
@@ -8,7 +16,7 @@
 }
 
 .contact h4{
-    color: #ffffff;
+    color: var(--color);
     font-size: 1rem;
     font-weight: 400;
     margin-bottom: 0;
@@ -17,7 +25,7 @@
 
 .contact a{
     text-decoration: none;
-    color: #ffffff;
+    color: var(--color);
     font-weight: 700;
     margin-bottom: 15px;
 }
@@ -28,6 +36,7 @@
 }
 
 .contact p{
+    color: var(--color);
     font-size: 0.9rem;
     font-weight: 400;
     font-style: italic;

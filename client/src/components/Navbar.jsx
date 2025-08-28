@@ -3,9 +3,8 @@ import React from 'react';
 import './Navbar.css';
 
 // COMPONENT
-function Navbar() {
+function Navbar({ darkMode, setDarkMode }) {
 
-    const [darkMode, setDarkMode] = React.useState(true);
     const [isOpen, setIsOpen] = React.useState(false);
 
     return (
@@ -13,7 +12,7 @@ function Navbar() {
             <button className="hamburger" onClick={() => setIsOpen(!isOpen)}>
                 ☰
             </button>
-            <a href="#about">About</a>
+            <a href="#hero">About</a>
             <a href="#experience">Experience</a>
             <a href="#projects">Projects</a>
             <a href="#features">Features</a>
@@ -31,7 +30,8 @@ function Navbar() {
                     <a href="#contact">Contact</a>
                     <button className="toggle" onClick={() => setDarkMode(!darkMode)}>
                         {darkMode ? "🌙" : "☀️"}
-                    </button>
+                    </button>   
+
                 </div>
             )}
         </div>

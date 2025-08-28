@@ -1,3 +1,11 @@
+:root {
+  --color: #ffffff;
+}
+
+[data-theme="light"] {
+  --color: #333;
+}
+
 .feature-item {
     width: 80%;
     padding-top: 2rem;
@@ -37,4 +45,6 @@
     display: block;
     font-size: 1.1rem;
     margin: 0 auto 1 auto;
+    font-weight: 600;
+    color: var(--color);
 }

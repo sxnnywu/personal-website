@@ -28,7 +28,7 @@ function Features() {
     ]
 
     return (
-        <div className="features">
+        <div className="features" id="features">
             <h2>Where I've Been Featured</h2>
             <p>A few moments I'm proud of</p>
             <div className="featureContainer">

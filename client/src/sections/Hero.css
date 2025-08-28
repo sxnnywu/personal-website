@@ -1,3 +1,13 @@
+:root {
+  --color: #ffffff;
+  --button: #eaf8ff;
+}
+
+[data-theme="light"] {
+  --color: #333;
+  --button: #333;
+}
+
 .hero {
     display: flex;
     flex-direction: row;
@@ -5,7 +15,7 @@
     justify-content: center;
     min-height: 100vh;
     width: 100%;
-    color: #ffffff;
+    color: var(--color);
     padding-top: 2rem;
     padding: 2rem 1rem;
     box-sizing: border-box;
@@ -65,8 +75,8 @@
 
 .hero a {
     text-decoration: none;
-    color: #eaf8ff;
-    border: 0.8px solid #eaf8ff;
+    color: var(--button);
+    border: 0.8px solid var(--button);
     padding: 0.6rem 2.5rem;
     border-radius: 8px;
     transition: background-color 0.3s ease;
@@ -92,7 +102,7 @@
     margin-top: 6rem;
     margin-right: 3rem;
     margin-left: 4vw;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
     flex-shrink: 0;
     animation: gentleFadeIn 2s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
 }

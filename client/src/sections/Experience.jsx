@@ -118,7 +118,7 @@ function Experience() {
     ]
 
     return (
-        <div className="experience">
+        <div className="experience" id="experience">
             <h2>Experience</h2>
             <p>All my strategy, problem-solving, and growth in action</p>
             <ExperienceBelt onSelect={handleSelectExperience} />

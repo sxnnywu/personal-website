@@ -1,3 +1,11 @@
+:root {
+  --color: #ffffff;
+}
+
+[data-theme="light"] {
+  --color: #333;
+}
+
 .experience {
     display: flex;
     flex-direction: column;
@@ -8,7 +16,7 @@
 }
 
 .experience h2 {
-    color: #ffffff;
+    color: var(--color);
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 0;
@@ -21,6 +29,7 @@
     font-style: italic;
     margin-top: 0;
     margin-bottom: 3rem;
+    color: var(--color);
 }
 
 .experience .modal-overlay{
@@ -41,7 +50,6 @@
     to { opacity: 1; }
 }
 
-/* Optional: add a slight pop/fade effect to ExperienceStory */
 .experience-story {
     transform: scale(0.95);
     animation: popIn 0.3s forwards;

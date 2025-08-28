@@ -17,7 +17,7 @@ function Hero() {
                     <p className="headline-text"><b>Business Administration @ Lazaridis School of Business</b></p>
                 </div>
 
-                <div className="description">
+                <div className="description" id="hero">
                     <p>Things I love:</p>
                     <ul>
                         <li>Building tools that make life better</li>

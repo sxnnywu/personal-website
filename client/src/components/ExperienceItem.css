@@ -1,3 +1,13 @@
+:root {
+  --color: #ffffff;
+  --grey: #9d9d9d;
+}
+
+[data-theme="light"] {
+  --color: #333;
+  --grey: #7a7a7a;
+}
+
 .experience-item {
     display: flex;
     flex-direction: column;
@@ -32,7 +42,7 @@
     font-size: 1rem;
     font-weight: 600;
     margin: 0;
-    color: #ffffff;
+    color: var(--color);
 }
 
 .experience-item p,
@@ -46,7 +56,7 @@
     font-size: 0.9rem;
     font-weight: 400;
     margin: 0;
-    color: #ffffff;
+    color: var(--color);
 }
 
 .experience-item button {
@@ -71,5 +81,5 @@
 
 .experience-item span {
     font-size: 0.8rem;
-    color: #9d9d9d;
+    color: var(--grey);
 }

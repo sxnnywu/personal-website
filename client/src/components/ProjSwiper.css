@@ -1,3 +1,15 @@
+:root {
+  --color: #ffffff;
+  --grey: #ccc;
+  --pink: #ffb8b8;
+}
+
+[data-theme="light"] {
+  --color: #333;
+  --grey: #7a7a7a;
+  --pink: #de7293;
+}
+
 .mySwiper {
   width: 80%;
   padding-top: 2rem;
@@ -39,14 +51,15 @@
 }
 
 .project-card h3 {
+  color: var(--color);
   font-size: 1.1rem;
   margin-top: 1.5rem;
   margin-bottom: 0.2rem;
 }
 
 .project-card .description {
+  color: var(--grey);
   font-size: 0.8rem;
-  color: #ccc;
   margin-bottom: 1rem;
 }
 
@@ -56,5 +69,5 @@
   font-style: normal;
   margin-top: 0;
   margin-bottom: 1rem;
-  color: #ffb8b8;
+  color: var(--pink);
 }
