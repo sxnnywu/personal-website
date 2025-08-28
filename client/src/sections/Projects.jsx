@@ -80,7 +80,7 @@ function Projects() {
         },
         {
             title: "MIND (Math in Nature's Design",
-            description: "Cofounder, research writer, marketing manager",
+            description: "Cofounder",
             stack: "Weekly math blog with 600+ readers",
             link: "https://mindmathblog.wordpress.com/",
             imageURL: mind
