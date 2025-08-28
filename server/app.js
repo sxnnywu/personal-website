@@ -43,8 +43,10 @@ app.post("/likes", async (req, res) => {
     const result = await likesCollection.findOneAndUpdate(
       { _id: "likes" },
       { $inc: { count: 1 } },
-      { returnDocument: "after", upsert: true } // ensures doc exists
+      { returnDocument: "after", upsert: true }
     );
+
+    console.log("findOneAndUpdate result:", result);
 
     // Always send a valid JSON response
     const count = result.value?.count ?? 0;
