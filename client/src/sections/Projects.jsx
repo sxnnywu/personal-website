@@ -77,7 +77,7 @@ function Projects() {
             title: "Byte Sized Learning",
             description: "Co-author",
             stack: "Coding workbook for kids donated across Peru & Kenya to underserved students",
-            imageURL: bytes
+            imageURL: byte
         },
         {
             title: "MIND (Math in Nature's Design",
