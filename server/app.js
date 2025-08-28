@@ -8,28 +8,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-let likesCollection;
-
-// Connect to MongoDB
-async function connectDB() {
-  const client = new MongoClient(process.env.MONGO_URI);
-  await client.connect();
-  const db = client.db("heartApp");
-  likesCollection = db.collection("likes");
-
-  // Ensure document exists
-  await likesCollection.updateOne(
-    { _id: "likes" },
-    { $setOnInsert: { count: 0 } },
-    { upsert: true }
-  );
-
-  console.log("Connected to MongoDB");
-}
-connectDB().catch(console.error);
+export let likesCollection;
 
 // Routes
 app.get("/likes", async (req, res) => {
+  if (!likesCollection) return res.status(503).json({ error: "DB not ready" });
   try {
     const doc = await likesCollection.findOne({ _id: "likes" });
     res.json({ count: doc.count });
@@ -39,14 +22,14 @@ app.get("/likes", async (req, res) => {
 });
 
 app.post("/likes", async (req, res) => {
+  if (!likesCollection) return res.status(503).json({ error: "DB not ready" });
   try {
     const result = await likesCollection.findOneAndUpdate(
       { _id: "likes" },
       { $inc: { count: 1 } },
-      { returnDocument: "after", upsert: true } // ensures doc exists
+      { returnDocument: "after", upsert: true }
     );
 
-    // Always send a valid JSON response
     const count = result.value?.count ?? 0;
     res.json({ count });
   } catch (err) {
