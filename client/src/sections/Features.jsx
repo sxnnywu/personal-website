@@ -17,7 +17,7 @@ function Features() {
         },
         {
             platform: "Innovation Insider",
-            link: "https://lnkd.in/gMwe-YkW",
+            link: "https://innovationworld.org/innovation-insider/#flipbook-innovation-insider-april-2025/1/",
             image: innovation
         },
         {

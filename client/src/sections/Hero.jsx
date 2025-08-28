@@ -31,7 +31,7 @@ function Hero() {
                 <div className="buttons"> 
                     <a href="https://www.linkedin.com/in/sunny-wu-dev/" target="_blank" rel="noopener noreferrer" className="button">LinkedIn</a>
                     <a href="https://www.github.com/sxnnywu" target="_blank" rel="noopener noreferrer" className="button">GitHub</a>
-                    <a href="https://sunnywu.ca/resume.pdf" target="_blank" rel="noopener noreferrer" className="button">Resume</a>
+                    <a href="https://drive.google.com/file/d/1rKcuThrXQjGTkhZTZe4kFewW9fTNJtIO/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="button">Resume</a>
                 </div>
             </div>
 

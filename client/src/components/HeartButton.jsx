@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import './HeartButton.css';
 
 function HeartButton() {
-
   const [count, setCount] = useState(0);
   const API_URL = "http://localhost:4000";
 
@@ -23,8 +22,10 @@ function HeartButton() {
   }
 
   return (
-    <div className="heart" onClick={handleClick}>
-      ❤️ {count}
+    <div className="heart-wrapper">
+      <div className="heart" onClick={handleClick}>
+        ❤️ {count}
+      </div>
     </div>
   );
 }
