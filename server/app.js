@@ -12,48 +12,46 @@ let likesCollection;
 
 // Connect to MongoDB
 export async function connectDB() {
-  const client = new MongoClient(process.env.MONGO_URI);
-  await client.connect();
-  const db = client.db("heartApp");
-  likesCollection = db.collection("likes");
+    const client = new MongoClient(process.env.MONGO_URI);
+    await client.connect();
+    const db = client.db("heartApp");
+    likesCollection = db.collection("likes");
 
-  // Ensure document exists
-  await likesCollection.updateOne(
-    { _id: "likes" },
-    { $setOnInsert: { count: 0 } },
-    { upsert: true }
-  );
+    // Ensure document exists
+    await likesCollection.updateOne(
+        { _id: "likes" },
+        { $setOnInsert: { count: 0 } },
+        { upsert: true }
+    );
 
-  console.log("Connected to MongoDB");
+    console.log("Connected to MongoDB");
 }
 connectDB().catch(console.error);
 
 // Routes
 app.get("/likes", async (req, res) => {
-  try {
-    const doc = await likesCollection.findOne({ _id: "likes" });
-    res.json({ count: doc.count });
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
+    try {
+        const doc = await likesCollection.findOne({ _id: "likes" });
+        res.json({ count: doc.count });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
 });
 
 app.post("/likes", async (req, res) => {
-  try {
-    const result = await likesCollection.findOneAndUpdate(
-      { _id: "likes" },
-      { $inc: { count: 1 } },
-      { returnDocument: "after", upsert: true }
-    );
+    try {
+        const result = await likesCollection.findOneAndUpdate(
+            { _id: "likes" },
+            { $inc: { count: 1 } },
+            { returnDocument: "after", upsert: true }
+        );
 
-    console.log("findOneAndUpdate result:", result);
+        console.log("findOneAndUpdate result:", result);
 
-    // Always send a valid JSON response
-    const count = result.value?.count ?? 0;
-    res.json({ count });
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
+        res.json({ count: result?.value?.count || result.count || 0 });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
 });
 
 export default app;
