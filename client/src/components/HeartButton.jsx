@@ -3,7 +3,7 @@ import './HeartButton.css';
 
 function HeartButton() {
   const [count, setCount] = useState(0);
-  const API_URL = "http://localhost:4000";
+  const API_URL = "https://personal-website-z9ma.onrender.com";
 
   useEffect(() => {
     fetch(`${API_URL}/likes`)
