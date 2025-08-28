@@ -11,7 +11,7 @@ app.use(express.json());
 let likesCollection;
 
 // Connect to MongoDB
-async function connectDB() {
+export async function connectDB() {
   const client = new MongoClient(process.env.MONGO_URI);
   await client.connect();
   const db = client.db("heartApp");
