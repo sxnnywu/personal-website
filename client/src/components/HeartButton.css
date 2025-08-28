@@ -15,7 +15,7 @@
   border-radius: 2rem;
   cursor: pointer;
   color: var(--text, black);
-  width: 50px;
+  width: 70px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.8);
   transition: transform 0.3s ease-in-out;
 }
