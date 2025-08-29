@@ -7,6 +7,7 @@ import chalkboard from '../assets/chalkboard.png';
 import chalk from '../assets/chalk.png';
 import crimesight from '../assets/crimesight.png';
 import queueme from '../assets/queueme.png';
+import exercise from '../assets/exercise.png';
 import beamy from '../assets/beamy.png';
 import bohanza from '../assets/bohanza.png';
 import mazerace from '../assets/mazerace.png';
@@ -45,6 +46,12 @@ function Projects() {
             stack: "react native, typescript, python, flask",
             link: "https://github.com/sxnnywu/QueueMe",
             imageURL: queueme
+        },
+        {
+            title: "Exercise Tracker",
+            description: "Basic desktop app for multiple users to log exercises",
+            stack: "react js, node js, express, mongodb",
+            imageURL: exercise
         },
         {
             title: "Code With Beamy",
