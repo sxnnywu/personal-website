@@ -51,6 +51,7 @@ function Projects() {
             title: "Exercise Tracker",
             description: "Basic desktop app for multiple users to log exercises",
             stack: "react js, node js, express, mongodb",
+            link: "https://github.com/sxnnywu/exercise-tracker-fe",
             imageURL: exercise
         },
         {
